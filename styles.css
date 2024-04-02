@@ -1,0 +1,158 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  header h1 {
+    margin: 0;
+    padding: 0;
+  }
+  header h1 span {  
+    color: red; 
+  }
+  
+  header p {
+    margin: 10px 0;
+  }
+  
+  .carousel {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+  }
+  
+  .carousel img {
+    width: 100%;
+    height: auto;
+    display: block;
+    animation: fade 5s infinite;
+  }
+  
+   @keyframes fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  /* Make the image fully visible when it's showing */
+  .active, .carousel img.active {
+    animation-name: fade;
+    z-index: 10;
+  }
+  
+  /* Show the next image when the current one is fading out */
+  .carousel img.right-enter, .carousel img.left-leave {
+    animation-direction: reverse;
+  }
+ 
+  .services {
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .services h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  
+  .services ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .services ul li {
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+    transition: 0.3s;
+  }
+  
+  .services ul li:hover {
+    background-color: #ddd;
+  }
+  
+  .prices {
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .prices h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  
+  .prices table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .prices table th, .prices table td {
+    padding: 5px;
+    border: 1px solid #ddd;
+  }
+  
+  .quote {
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .quote a {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  .quote a:hover {
+    background-color: #222;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  footer ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  footer ul li {
+    display: inline-block;
+    padding: 5px;
+  }
+  
+  footer ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  footer ul li a:hover {
+    color: #ddd;
+  }
+  
+  @media (max-width: 768px) {
+    .services, .prices, .quote {
+      width: 100%;
+    }
+  }
+  
